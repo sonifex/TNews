@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8BD645C79A2CE7D5A9100F /* libPods-TNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F665D0197C5E4D136864A616 /* libPods-TNews.a */; };
 		7EE589AE1D43F56000B75180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589AD1D43F56000B75180 /* main.m */; };
 		7EE589B11D43F56000B75180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589B01D43F56000B75180 /* AppDelegate.m */; };
 		7EE589B41D43F56000B75180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589B31D43F56000B75180 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		7EE589B91D43F56000B75180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE589B81D43F56000B75180 /* Assets.xcassets */; };
 		7EE589BC1D43F56000B75180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE589BA1D43F56000B75180 /* LaunchScreen.storyboard */; };
 		7EE589C71D43F56000B75180 /* TNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589C61D43F56000B75180 /* TNewsTests.m */; };
+		DE497C5D037850601667CE7E /* libPods-TNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE903DAA906703DD5B205561 /* libPods-TNewsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43F30158BABD33BC65115FDE /* Pods-TNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNewsTests/Pods-TNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE589A91D43F56000B75180 /* TNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE589AD1D43F56000B75180 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EE589AF1D43F56000B75180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		7EE589C21D43F56000B75180 /* TNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE589C61D43F56000B75180 /* TNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNewsTests.m; sourceTree = "<group>"; };
 		7EE589C81D43F56000B75180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8264FDA1B746A432DE096FA4 /* Pods-TNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNews/Pods-TNews.release.xcconfig"; sourceTree = "<group>"; };
+		BB96586F1511FB1CAAAF5FC1 /* Pods-TNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNewsTests/Pods-TNewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE903DAA906703DD5B205561 /* libPods-TNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC819AFA874A1757A0808C86 /* Pods-TNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TNews/Pods-TNews.debug.xcconfig"; sourceTree = "<group>"; };
+		F665D0197C5E4D136864A616 /* libPods-TNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8BD645C79A2CE7D5A9100F /* libPods-TNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE497C5D037850601667CE7E /* libPods-TNewsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29588698AE5851A385A59D0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F665D0197C5E4D136864A616 /* libPods-TNews.a */,
+				DE903DAA906703DD5B205561 /* libPods-TNewsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EE589A01D43F56000B75180 = {
 			isa = PBXGroup;
 			children = (
 				7EE589AB1D43F56000B75180 /* TNews */,
 				7EE589C51D43F56000B75180 /* TNewsTests */,
 				7EE589AA1D43F56000B75180 /* Products */,
+				D2A4D8B646AC8EE5C6C3E5C3 /* Pods */,
+				29588698AE5851A385A59D0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +132,17 @@
 			path = TNewsTests;
 			sourceTree = "<group>";
 		};
+		D2A4D8B646AC8EE5C6C3E5C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC819AFA874A1757A0808C86 /* Pods-TNews.debug.xcconfig */,
+				8264FDA1B746A432DE096FA4 /* Pods-TNews.release.xcconfig */,
+				43F30158BABD33BC65115FDE /* Pods-TNewsTests.debug.xcconfig */,
+				BB96586F1511FB1CAAAF5FC1 /* Pods-TNewsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE589CB1D43F56000B75180 /* Build configuration list for PBXNativeTarget "TNews" */;
 			buildPhases = (
+				F18F2719CB0E6A6469D57E83 /* [CP] Check Pods Manifest.lock */,
 				7EE589A51D43F56000B75180 /* Sources */,
 				7EE589A61D43F56000B75180 /* Frameworks */,
 				7EE589A71D43F56000B75180 /* Resources */,
+				06E1809236A93F2B0D4F0EAA /* [CP] Embed Pods Frameworks */,
+				AAAF60A19312A92670AC4426 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE589CE1D43F56000B75180 /* Build configuration list for PBXNativeTarget "TNewsTests" */;
 			buildPhases = (
+				1008832B28BE6EE64D3A9F91 /* [CP] Check Pods Manifest.lock */,
 				7EE589BE1D43F56000B75180 /* Sources */,
 				7EE589BF1D43F56000B75180 /* Frameworks */,
 				7EE589C01D43F56000B75180 /* Resources */,
+				5CF7C3C6EFDB19D7D60F1A2A /* [CP] Embed Pods Frameworks */,
+				0EE08505835853385C3B5AA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +243,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06E1809236A93F2B0D4F0EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNews/Pods-TNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EE08505835853385C3B5AA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNewsTests/Pods-TNewsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1008832B28BE6EE64D3A9F91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CF7C3C6EFDB19D7D60F1A2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNewsTests/Pods-TNewsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAAF60A19312A92670AC4426 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TNews/Pods-TNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F18F2719CB0E6A6469D57E83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7EE589A51D43F56000B75180 /* Sources */ = {
@@ -339,6 +470,7 @@
 		};
 		7EE589CC1D43F56000B75180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC819AFA874A1757A0808C86 /* Pods-TNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TNews/Info.plist;
@@ -350,6 +482,7 @@
 		};
 		7EE589CD1D43F56000B75180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8264FDA1B746A432DE096FA4 /* Pods-TNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TNews/Info.plist;
@@ -361,6 +494,7 @@
 		};
 		7EE589CF1D43F56000B75180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F30158BABD33BC65115FDE /* Pods-TNewsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TNewsTests/Info.plist;
@@ -373,6 +507,7 @@
 		};
 		7EE589D01D43F56000B75180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB96586F1511FB1CAAAF5FC1 /* Pods-TNewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TNewsTests/Info.plist;
@@ -402,6 +537,7 @@
 				7EE589CD1D43F56000B75180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EE589CE1D43F56000B75180 /* Build configuration list for PBXNativeTarget "TNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +546,7 @@
 				7EE589D01D43F56000B75180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
