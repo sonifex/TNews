@@ -10,11 +10,13 @@
 		3A8BD645C79A2CE7D5A9100F /* libPods-TNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F665D0197C5E4D136864A616 /* libPods-TNews.a */; };
 		7EE589AE1D43F56000B75180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589AD1D43F56000B75180 /* main.m */; };
 		7EE589B11D43F56000B75180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589B01D43F56000B75180 /* AppDelegate.m */; };
-		7EE589B41D43F56000B75180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589B31D43F56000B75180 /* ViewController.m */; };
 		7EE589B71D43F56000B75180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE589B51D43F56000B75180 /* Main.storyboard */; };
 		7EE589B91D43F56000B75180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE589B81D43F56000B75180 /* Assets.xcassets */; };
 		7EE589BC1D43F56000B75180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE589BA1D43F56000B75180 /* LaunchScreen.storyboard */; };
 		7EE589C71D43F56000B75180 /* TNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589C61D43F56000B75180 /* TNewsTests.m */; };
+		7EE589D31D43F83600B75180 /* MainViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589D21D43F83600B75180 /* MainViewCotroller.m */; };
+		7EE589D81D43F87E00B75180 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589D71D43F87E00B75180 /* SwipeView.m */; };
+		7EE589DC1D43F89D00B75180 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589DB1D43F89D00B75180 /* CAPSPageMenu.m */; };
 		DE497C5D037850601667CE7E /* libPods-TNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE903DAA906703DD5B205561 /* libPods-TNewsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +36,6 @@
 		7EE589AD1D43F56000B75180 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EE589AF1D43F56000B75180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EE589B01D43F56000B75180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7EE589B21D43F56000B75180 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7EE589B31D43F56000B75180 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7EE589B61D43F56000B75180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EE589B81D43F56000B75180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EE589BB1D43F56000B75180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +43,12 @@
 		7EE589C21D43F56000B75180 /* TNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE589C61D43F56000B75180 /* TNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNewsTests.m; sourceTree = "<group>"; };
 		7EE589C81D43F56000B75180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EE589D11D43F83600B75180 /* MainViewCotroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCotroller.h; sourceTree = "<group>"; };
+		7EE589D21D43F83600B75180 /* MainViewCotroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCotroller.m; sourceTree = "<group>"; };
+		7EE589D61D43F87E00B75180 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
+		7EE589D71D43F87E00B75180 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		7EE589DA1D43F89D00B75180 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
+		7EE589DB1D43F89D00B75180 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
 		8264FDA1B746A432DE096FA4 /* Pods-TNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNews/Pods-TNews.release.xcconfig"; sourceTree = "<group>"; };
 		BB96586F1511FB1CAAAF5FC1 /* Pods-TNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TNewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TNewsTests/Pods-TNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE903DAA906703DD5B205561 /* libPods-TNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,15 +108,16 @@
 		7EE589AB1D43F56000B75180 /* TNews */ = {
 			isa = PBXGroup;
 			children = (
+				7EE589D41D43F86C00B75180 /* Libraries */,
 				7EE589AF1D43F56000B75180 /* AppDelegate.h */,
 				7EE589B01D43F56000B75180 /* AppDelegate.m */,
-				7EE589B21D43F56000B75180 /* ViewController.h */,
-				7EE589B31D43F56000B75180 /* ViewController.m */,
 				7EE589B51D43F56000B75180 /* Main.storyboard */,
 				7EE589B81D43F56000B75180 /* Assets.xcassets */,
 				7EE589BA1D43F56000B75180 /* LaunchScreen.storyboard */,
 				7EE589BD1D43F56000B75180 /* Info.plist */,
 				7EE589AC1D43F56000B75180 /* Supporting Files */,
+				7EE589D11D43F83600B75180 /* MainViewCotroller.h */,
+				7EE589D21D43F83600B75180 /* MainViewCotroller.m */,
 			);
 			path = TNews;
 			sourceTree = "<group>";
@@ -130,6 +137,33 @@
 				7EE589C81D43F56000B75180 /* Info.plist */,
 			);
 			path = TNewsTests;
+			sourceTree = "<group>";
+		};
+		7EE589D41D43F86C00B75180 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				7EE589D91D43F89D00B75180 /* PageMenu */,
+				7EE589D51D43F87E00B75180 /* SwipeView */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		7EE589D51D43F87E00B75180 /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				7EE589D61D43F87E00B75180 /* SwipeView.h */,
+				7EE589D71D43F87E00B75180 /* SwipeView.m */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
+		7EE589D91D43F89D00B75180 /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7EE589DA1D43F89D00B75180 /* CAPSPageMenu.h */,
+				7EE589DB1D43F89D00B75180 /* CAPSPageMenu.m */,
+			);
+			path = PageMenu;
 			sourceTree = "<group>";
 		};
 		D2A4D8B646AC8EE5C6C3E5C3 /* Pods */ = {
@@ -342,8 +376,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EE589B41D43F56000B75180 /* ViewController.m in Sources */,
+				7EE589D31D43F83600B75180 /* MainViewCotroller.m in Sources */,
+				7EE589D81D43F87E00B75180 /* SwipeView.m in Sources */,
 				7EE589B11D43F56000B75180 /* AppDelegate.m in Sources */,
+				7EE589DC1D43F89D00B75180 /* CAPSPageMenu.m in Sources */,
 				7EE589AE1D43F56000B75180 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewCotroller.h
 //  TNews
 //
 //  Created by Soner Güler on 23/07/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainViewCotroller : UIViewController
 
 @end
-
