@@ -10,9 +10,11 @@
 #import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 
 @interface NewsCell()
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (nonatomic,strong) News *story;
 
 @end
 
@@ -21,16 +23,18 @@
 
 -(void)setWithNews:(News *)news {
     
-    self.titleLabel.text = news.title;
-    [self.coverImageView setImageWithURL:news.images.box usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _story = news;
+}
+
+- (void)drawRect:(CGRect)rect {
+    
+    self.titleLabel.text = self.story.title;
+    self.categoryLabel.text = self.story.category.name;
+    [self.coverImageView setImageWithURL:self.story.images.box usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    
-}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

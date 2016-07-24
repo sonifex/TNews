@@ -22,23 +22,34 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kl4-wi-6h9">
-                        <rect key="frame" x="150" y="8" width="209" height="100.5"/>
+                        <rect key="frame" x="150" y="8" width="209" height="85.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txO-mo-zjD">
+                        <rect key="frame" x="150" y="93.5" width="209" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Kl4-wi-6h9" secondAttribute="trailing" constant="8" id="09o-oi-Ea3"/>
-                    <constraint firstAttribute="bottom" secondItem="Kl4-wi-6h9" secondAttribute="bottom" constant="8" id="5Yx-fs-lWN"/>
+                    <constraint firstItem="txO-mo-zjD" firstAttribute="top" secondItem="Kl4-wi-6h9" secondAttribute="bottom" id="2ha-eK-4Qv"/>
+                    <constraint firstAttribute="bottom" secondItem="Kl4-wi-6h9" secondAttribute="bottom" constant="23" id="5Yx-fs-lWN"/>
                     <constraint firstItem="xwF-Sm-IhP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9fy-1u-6NG"/>
                     <constraint firstItem="xwF-Sm-IhP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NZl-de-ne5"/>
+                    <constraint firstItem="txO-mo-zjD" firstAttribute="leading" secondItem="xwF-Sm-IhP" secondAttribute="trailing" constant="8" id="SZm-3x-frv"/>
+                    <constraint firstAttribute="bottom" secondItem="txO-mo-zjD" secondAttribute="bottom" constant="8" id="Z0l-94-ysB"/>
                     <constraint firstItem="Kl4-wi-6h9" firstAttribute="leading" secondItem="xwF-Sm-IhP" secondAttribute="trailing" constant="8" id="dfi-R6-alW"/>
                     <constraint firstAttribute="bottom" secondItem="xwF-Sm-IhP" secondAttribute="bottom" id="krb-2c-HeV"/>
+                    <constraint firstAttribute="trailing" secondItem="txO-mo-zjD" secondAttribute="trailing" constant="8" id="wK5-b3-gE5"/>
                     <constraint firstItem="Kl4-wi-6h9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="x6D-54-Ygh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="categoryLabel" destination="txO-mo-zjD" id="Ngm-yu-fOP"/>
                 <outlet property="coverImageView" destination="xwF-Sm-IhP" id="pPv-AB-ync"/>
                 <outlet property="titleLabel" destination="Kl4-wi-6h9" id="m49-3o-wdb"/>
             </connections>

@@ -69,6 +69,8 @@ static  NSString *cellIdentifier =  @"NewsCell";
     }];
 }
 
+- (IBAction)refresh:(UIBarButtonItem *)sender {
+}
 
 
 
