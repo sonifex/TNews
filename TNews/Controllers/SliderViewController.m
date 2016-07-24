@@ -7,7 +7,8 @@
 //
 
 #import "SliderViewController.h"
-#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+
+#import "SliderView.h"
 
 @interface SliderViewController ()
 
@@ -61,13 +62,12 @@
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:view.frame];
-    
     News *currentNews = [self.stories objectAtIndex:index];
     
-    [imageView setImageWithURL:currentNews.images.page usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    SliderView *sliderView = [[SliderView alloc] initWithFrame:view.frame];
+    [sliderView setWithStory:currentNews];
     
-    return imageView;
+    return sliderView;
     
 }
 
@@ -85,9 +85,9 @@
 
 - (void)updateViewConstraints {
     
-   [self.sliderView mas_makeConstraints:^(MASConstraintMaker *make) {
-       make.edges.equalTo(self.view);
-   }];
+    [self.sliderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     
     [super updateViewConstraints];
 }
