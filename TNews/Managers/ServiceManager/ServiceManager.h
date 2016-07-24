@@ -24,6 +24,6 @@ typedef void(^APIClientCompletition)(id response ,BOOL success , NSError* error)
 
 - (void)getStoriesWithPage:(NSInteger)page categoryID:(NSString*)categoryID completition:(APIClientCompletition)completition;
 - (void)getCategories_completition:(APIClientCompletition)completition;
-- (void)getStoryWithID:(NSInteger)storyID completition:(APIClientCompletition)completition;
+- (void)getStoryWithID:(NSString*)storyID completition:(APIClientCompletition)completition;
 
 @end

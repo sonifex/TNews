@@ -10,6 +10,8 @@
 
 #import "SliderView.h"
 
+#import "NewsDetailPagedViewController.h"
+
 @interface SliderViewController ()
 
 @property (nonatomic,strong)NSArray *stories;
@@ -95,6 +97,8 @@
 
 - (void)swipeView:(SwipeView *)swipeView didSelectItemAtIndex:(NSInteger)index {
     
+    NewsDetailPagedViewController *pagedDetail = [[NewsDetailPagedViewController alloc] initWithStories:self.stories andCurrentIndex:index];
+    [self.navigationController pushViewController:pagedDetail animated:YES];
 }
 
 

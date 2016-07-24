@@ -78,9 +78,9 @@
 }
 
 
-- (void)getStoryWithID:(NSInteger)storyID completition:(APIClientCompletition)completition {
+- (void)getStoryWithID:(NSString*)storyID completition:(APIClientCompletition)completition {
     
-    [self getStoriesWithParams:@{@"story": @(storyID)} completition:^(id response, BOOL success, NSError *error) {
+    [self getStoriesWithParams:@{@"story": storyID} completition:^(id response, BOOL success, NSError *error) {
         
         News *story = [[News alloc] initWithDictionary:[response objectForKey:@"data"] error:nil];
         completition(story,success,error);

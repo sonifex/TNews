@@ -448,9 +448,9 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
                                     if (index >= 0 && index < _controllerArray.count ){
                                         // Check dictionary if page was already added
                                         if (![_pagesAddedSet containsObject:@(index)]) {
-
+                                            
                                             [self addPageAtIndex:index];
-
+                                            
                                             [_pagesAddedSet addObject:@(index)];
                                         }
                                     }
@@ -465,10 +465,10 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
                                 if (_currentPageIndex != _controllerArray.count - 1 ){
                                     // Add page to the left of current page
                                     NSInteger index = _currentPageIndex - 1;
-
+                                    
                                     if (![_pagesAddedSet containsObject:@(index)] && index < _controllerArray.count && index >= 0) {
                                         [self addPageAtIndex:index];
-
+                                        
                                         [_pagesAddedSet addObject:@(index)];
                                     }
                                     
@@ -480,7 +480,7 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
                                     NSInteger index = _currentPageIndex + 1;
                                     
                                     if (![_pagesAddedSet containsObject:@(index)] && index < _controllerArray.count && index >= 0) {
-
+                                        
                                         [self addPageAtIndex:index];
                                         [_pagesAddedSet addObject:@(index)];
                                     }
@@ -538,9 +538,9 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
                             }
                             NSInteger indexRightTwo = page + 2;
                             if ([_pagesAddedSet containsObject:@(indexRightTwo)]) {
-
+                                
                                 [_pagesAddedSet removeObject:@(indexRightTwo)];
-
+                                
                                 [self removePageAtIndex:indexRightTwo];
                             }
                         }
@@ -608,7 +608,7 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
             [self removePageAtIndex:num.integerValue];
         }
     }
-
+    
     _startingPageForScroll = _currentPageIndex;
     _didTapMenuItemToScroll = NO;
     
@@ -874,7 +874,11 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
  
  :param: index Index of the page to move to
  */
-- (void)moveToPage:(NSInteger)index
+- (void)moveToPage:(NSInteger)index {
+    [self moveToPage:index withAnimated:YES];
+}
+
+- (void)moveToPage:(NSInteger)index withAnimated:(BOOL)animated
 {
     if (index >= 0 && index < _controllerArray.count) {
         // Update page if changed
@@ -906,10 +910,16 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
         // Move controller scroll view when tapping menu item
         double duration = (double)(_scrollAnimationDurationOnMenuItemTap) / (double)(1000);
         
-        [UIView animateWithDuration:duration animations:^{
+        if (animated) {
+            [UIView animateWithDuration:duration animations:^{
+                CGFloat xOffset = (CGFloat)index * self.controllerScrollView.frame.size.width;
+                [self.controllerScrollView setContentOffset:CGPointMake(xOffset, self.controllerScrollView.contentOffset.y) animated:NO];
+            }];
+        } else {
             CGFloat xOffset = (CGFloat)index * self.controllerScrollView.frame.size.width;
             [self.controllerScrollView setContentOffset:CGPointMake(xOffset, self.controllerScrollView.contentOffset.y) animated:NO];
-        }];
+        }
+        
     }
 }
 

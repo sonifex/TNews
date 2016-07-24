@@ -12,6 +12,9 @@
 
 #import "NewsCell.h"
 
+#import "NewsDetailViewController.h"
+#import "NewsDetailPagedViewController.h"
+
 static  NSString *cellIdentifier =  @"NewsCell";
 
 @interface MainViewCotroller ()
@@ -36,12 +39,21 @@ static  NSString *cellIdentifier =  @"NewsCell";
 
 
 @implementation MainViewCotroller
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"News";
     
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadWithCategory:) name:@"reloadNewsWithCategory" object:nil];
     
@@ -153,6 +165,14 @@ static  NSString *cellIdentifier =  @"NewsCell";
     [cell setWithNews:currentNews];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // News *selectedStory = [self.news objectAtIndex:indexPath.row];
+    //NewsDetailViewController *detailVC = [[NewsDetailViewController alloc] initWithStory:selectedStory];
+    NewsDetailPagedViewController *pagedDetail = [[NewsDetailPagedViewController alloc] initWithStories:self.news andCurrentIndex:indexPath.row];
+    [self.navigationController pushViewController:pagedDetail animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
