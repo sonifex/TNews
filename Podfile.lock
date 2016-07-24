@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - JSONModel (1.3.0)
+  - Masonry (1.0.1)
   - MXParallaxHeader (0.5.1)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
@@ -25,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - JSONModel
+  - Masonry
   - MXParallaxHeader
   - SDWebImage
   - UIActivityIndicator-for-SDWebImage
@@ -32,10 +34,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MXParallaxHeader: b40fabd42d1bb76f6d1a713ceae5628f69241bd6
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 533b8963d57fb6e29fcd6125351aa4f59634cee3
+PODFILE CHECKSUM: 7fea1995c466f37f8a089d46411e5f3c36666ddd
 
 COCOAPODS: 1.0.1

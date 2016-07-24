@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TN0-13-f3n">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Cotroller-->
@@ -16,11 +17,91 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffV-O2-84x">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-NK-32C">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MD7-zv-Oc7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Vzw-mf-qVh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ffV-O2-84x" secondAttribute="trailing" id="EDG-a9-QRH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FBO-NK-32C" secondAttribute="bottom" id="QxL-UZ-JTY"/>
+                            <constraint firstItem="ffV-O2-84x" firstAttribute="height" secondItem="FBO-NK-32C" secondAttribute="height" multiplier="5:9" id="RBe-pr-XEJ"/>
+                            <constraint firstItem="ffV-O2-84x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vbm-KK-QCV"/>
+                            <constraint firstItem="ffV-O2-84x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X6s-rn-Yus"/>
+                            <constraint firstItem="FBO-NK-32C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dOo-Qk-rc7"/>
+                            <constraint firstItem="FBO-NK-32C" firstAttribute="top" secondItem="ffV-O2-84x" secondAttribute="bottom" id="fYM-Ny-ZVz"/>
+                            <constraint firstAttribute="trailing" secondItem="FBO-NK-32C" secondAttribute="trailing" id="xGu-6k-i84"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ffV-O2-84x"/>
+                                <exclude reference="FBO-NK-32C"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QxL-UZ-JTY"/>
+                                <exclude reference="dOo-Qk-rc7"/>
+                                <exclude reference="fYM-Ny-ZVz"/>
+                                <exclude reference="xGu-6k-i84"/>
+                                <exclude reference="EDG-a9-QRH"/>
+                                <exclude reference="RBe-pr-XEJ"/>
+                                <exclude reference="Vbm-KK-QCV"/>
+                                <exclude reference="X6s-rn-Yus"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ffV-O2-84x"/>
+                                <include reference="FBO-NK-32C"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QxL-UZ-JTY"/>
+                                <include reference="dOo-Qk-rc7"/>
+                                <include reference="fYM-Ny-ZVz"/>
+                                <include reference="xGu-6k-i84"/>
+                                <include reference="EDG-a9-QRH"/>
+                                <include reference="RBe-pr-XEJ"/>
+                                <include reference="Vbm-KK-QCV"/>
+                                <include reference="X6s-rn-Yus"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="DIT-zf-lFZ"/>
+                    <connections>
+                        <outlet property="sliderView" destination="ffV-O2-84x" id="QM8-44-1NY"/>
+                        <outlet property="tableView" destination="FBO-NK-32C" id="4o8-b2-cvp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1180.5" y="-282"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rwh-Rv-Esw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TN0-13-f3n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bca-2l-d9n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="V1z-Ua-mOQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dS-oQ-t9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385.5" y="-282"/>
         </scene>
     </scenes>
 </document>

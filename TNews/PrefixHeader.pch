@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  TNews
+//
+//  Created by Soner Güler on 24/07/16.
+//  Copyright © 2016 Soner Güler. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "ServiceManager.h"
+#import "Masonry.h"
+
+
+#endif /* PrefixHeader_pch */

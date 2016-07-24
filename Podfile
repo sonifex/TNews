@@ -10,6 +10,7 @@ target 'TNews' do
     pod 'UIActivityIndicator-for-SDWebImage'
     pod 'MXParallaxHeader'
     pod 'JSONModel'
+    pod 'Masonry'
     
     target 'TNewsTests' do
         inherit! :search_paths
