@@ -20,6 +20,7 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
   - UIActivityIndicator-for-SDWebImage (1.2):
     - SDWebImage (~> 3.7)
 
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Masonry
   - MXParallaxHeader
   - SDWebImage
+  - SVProgressHUD
   - UIActivityIndicator-for-SDWebImage
 
 SPEC CHECKSUMS:
@@ -37,8 +39,9 @@ SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MXParallaxHeader: b40fabd42d1bb76f6d1a713ceae5628f69241bd6
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 7fea1995c466f37f8a089d46411e5f3c36666ddd
+PODFILE CHECKSUM: 9403d7aeefa66ab15bbacd4079db18523a461cb4
 
 COCOAPODS: 1.0.1

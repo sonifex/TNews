@@ -11,5 +11,7 @@
 
 @interface SliderViewController : UIViewController<SwipeViewDataSource,SwipeViewDelegate>
 
+- (void)reloadData;
+
 
 @end

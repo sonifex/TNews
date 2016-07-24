@@ -10,8 +10,11 @@
 #define PrefixHeader_pch
 
 
+#define kReloadNewsWithCategory
+
 #import "ServiceManager.h"
 #import "Masonry.h"
-
+#import "SVProgressHUD.h"
+#import "News.h"
 
 #endif /* PrefixHeader_pch */

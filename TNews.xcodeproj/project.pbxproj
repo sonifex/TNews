@@ -14,6 +14,7 @@
 		7ED2F08A1D44EB0000839CAF /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2F0891D44EB0000839CAF /* SliderView.m */; };
 		7ED2F08D1D44EBAF00839CAF /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2F08C1D44EBAF00839CAF /* SliderViewController.m */; };
 		7ED2F0911D44F65F00839CAF /* JSONValueTransformer+URLTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2F0901D44F65F00839CAF /* JSONValueTransformer+URLTransformer.m */; };
+		7ED2F0941D45490700839CAF /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2F0931D45490700839CAF /* CategoryTableViewController.m */; };
 		7EE589AE1D43F56000B75180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589AD1D43F56000B75180 /* main.m */; };
 		7EE589B11D43F56000B75180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE589B01D43F56000B75180 /* AppDelegate.m */; };
 		7EE589B71D43F56000B75180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE589B51D43F56000B75180 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 		7ED2F08E1D44EC5C00839CAF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7ED2F08F1D44F65F00839CAF /* JSONValueTransformer+URLTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+URLTransformer.h"; sourceTree = "<group>"; };
 		7ED2F0901D44F65F00839CAF /* JSONValueTransformer+URLTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+URLTransformer.m"; sourceTree = "<group>"; };
+		7ED2F0921D45490700839CAF /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		7ED2F0931D45490700839CAF /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		7EE589A91D43F56000B75180 /* TNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE589AD1D43F56000B75180 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EE589AF1D43F56000B75180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				7ED2F0801D44E4B200839CAF /* MainViewCotroller.m */,
 				7ED2F08B1D44EBAF00839CAF /* SliderViewController.h */,
 				7ED2F08C1D44EBAF00839CAF /* SliderViewController.m */,
+				7ED2F0921D45490700839CAF /* CategoryTableViewController.h */,
+				7ED2F0931D45490700839CAF /* CategoryTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				7ED2F0861D44E79700839CAF /* NewsCell.m in Sources */,
 				7ED2F0811D44E4B200839CAF /* MainViewCotroller.m in Sources */,
 				7EE589E81D44035400B75180 /* News.m in Sources */,
+				7ED2F0941D45490700839CAF /* CategoryTableViewController.m in Sources */,
 				7EE589F41D440C9800B75180 /* NewsPaging.m in Sources */,
 				7EE58A031D4425B100B75180 /* BaseResponse.m in Sources */,
 				7EE589FF1D44246F00B75180 /* CategoriesResponse.m in Sources */,

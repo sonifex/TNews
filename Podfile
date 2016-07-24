@@ -11,6 +11,7 @@ target 'TNews' do
     pod 'MXParallaxHeader'
     pod 'JSONModel'
     pod 'Masonry'
+    pod 'SVProgressHUD'
     
     target 'TNewsTests' do
         inherit! :search_paths

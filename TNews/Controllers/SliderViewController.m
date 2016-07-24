@@ -14,6 +14,7 @@
 
 @property (nonatomic,strong)NSArray *stories;
 @property (nonatomic,strong)SwipeView *sliderView;
+@property (nonatomic,strong)NewsCategory *category;
 
 @end
 
@@ -24,25 +25,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"view size: %@",NSStringFromCGSize(self.view.frame.size));
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadWithCategory:) name:@"reloadNewsWithCategory" object:nil];
     
     self.sliderView = [[SwipeView alloc] initWithFrame:self.view.frame];
     self.sliderView.delegate = self;
     self.sliderView.dataSource = self;
-    NSLog(@"slider size: %@",NSStringFromCGSize(self.sliderView.frame.size));
     [self.view addSubview:self.sliderView];
     
     [self getSliderNews];
 }
 
+- (void)reloadData {
+    [self.sliderView reloadData];
+}
 
+- (void)reloadWithCategory:(NSNotification*)notification {
+    
+    NewsCategory *selectedCategory = notification.object;
+    self.category = selectedCategory;
+    
+    [self getSliderNews];
+}
 
 
 #pragma mark - SERVICE
 
 - (void)getSliderNews {
     
-    [[ServiceManager sharedManager] getStoriesWithPage:1 completition:^(StoriesResponse *response, BOOL success, NSError *error) {
+    NSString *categoryID;
+    if (self.category) {
+        categoryID = self.category.Id;
+    }
+    
+    [[ServiceManager sharedManager] getStoriesWithPage:1 categoryID:categoryID completition:^(StoriesResponse *response, BOOL success, NSError *error) {
         
         self.stories = [NSMutableArray arrayWithArray:response.stories];
         [self.sliderView reloadData];

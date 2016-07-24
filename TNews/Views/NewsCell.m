@@ -24,14 +24,9 @@
 -(void)setWithNews:(News *)news {
     
     _story = news;
-}
-
-- (void)drawRect:(CGRect)rect {
-    
     self.titleLabel.text = self.story.title;
     self.categoryLabel.text = self.story.category.name;
     [self.coverImageView setImageWithURL:self.story.images.box usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    
 }
 
 

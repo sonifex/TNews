@@ -22,8 +22,7 @@ typedef void(^APIClientCompletition)(id response ,BOOL success , NSError* error)
 + (ServiceManager*) sharedManager;
 
 
-- (void)getStoriesWithPage:(NSInteger)page completition:(APIClientCompletition)completition;
-- (void)getStoriesWithCategoryID:(NSInteger)categoryID completition:(APIClientCompletition)completition;
+- (void)getStoriesWithPage:(NSInteger)page categoryID:(NSString*)categoryID completition:(APIClientCompletition)completition;
 - (void)getCategories_completition:(APIClientCompletition)completition;
 - (void)getStoryWithID:(NSInteger)storyID completition:(APIClientCompletition)completition;
 

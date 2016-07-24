@@ -42,21 +42,17 @@
 }
 
 
-- (void)getStoriesWithPage:(NSInteger)page completition:(APIClientCompletition)completition {
+- (void)getStoriesWithPage:(NSInteger)page categoryID:(NSString*)categoryID completition:(APIClientCompletition)completition {
     
-    [self getStoriesWithParams:@{@"paging": @(page)} completition:^(id response, BOOL success, NSError *error) {
-        
-        StoriesResponse *storiesResponse = [[StoriesResponse alloc] initWithDictionary:response error:nil];
-        completition(storiesResponse,success,error);
-        
-    }];
+    NSDictionary *params;
     
-}
-
-
-- (void)getStoriesWithCategoryID:(NSInteger)categoryID completition:(APIClientCompletition)completition {
+    if (categoryID ) {
+        params  = @{@"category" : categoryID, @"paging" : @(page)};
+    }else {
+        params =  @{@"paging" : @(page)};
+    }
     
-    [self getStoriesWithParams:@{@"category": @(categoryID)} completition:^(id response, BOOL success, NSError *error) {
+    [self getStoriesWithParams:params completition:^(id response, BOOL success, NSError *error) {
         
         StoriesResponse *storiesResponse = [[StoriesResponse alloc] initWithDictionary:response error:nil];
         completition(storiesResponse,success,error);

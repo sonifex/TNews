@@ -40,18 +40,12 @@
 }
 
 
-- (void)drawRect:(CGRect)rect {
-    
-    [self.titleLabel setText:self.story.title];
-    [self.coverImageView setImageWithURL:self.story.images.box usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    
-}
-
 
 - (void)setWithStory:(News*)story {
     
     _story = story;
-    
+    [self.titleLabel setText:self.story.title];
+    [self.coverImageView setImageWithURL:self.story.images.box usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 }
 
 

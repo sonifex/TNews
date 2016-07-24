@@ -19,10 +19,14 @@ static APIClient *_sharedClient = nil;
     dispatch_once(&onceToken, ^{
         
         _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:BaseURLString]];
-        //_sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-        //_sharedClient.requestSerializer = [AFHTTPRequestSerializer serializer];
+        
+        _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];
+        [_sharedClient.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
         
     });
+    
+    
     
     return _sharedClient;
 }

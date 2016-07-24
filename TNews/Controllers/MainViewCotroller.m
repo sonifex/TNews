@@ -24,7 +24,11 @@ static  NSString *cellIdentifier =  @"NewsCell";
 
 @property (nonatomic,strong) NewsPaging *paging;
 
+@property (nonatomic,strong) NewsCategory *category;
+
 @property (nonatomic,strong) SliderViewController *sliderVC;
+
+@property (nonatomic) BOOL isBottomReached;
 
 @end
 
@@ -38,16 +42,29 @@ static  NSString *cellIdentifier =  @"NewsCell";
     
     self.title = @"News";
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadWithCategory:) name:@"reloadNewsWithCategory" object:nil];
+    
+    [self setupSlider];
+    
+    self.news = [NSMutableArray new];
+    [self getNews];
+}
+
+
+
+#pragma mark - SETUP
+
+- (void)setupSlider {
+    
     self.sliderVC = [[SliderViewController alloc] init];
     [self.sliderVC.view setFrame:CGRectMake(0, 0, CGRectGetWidth(self.sliderView.frame), CGRectGetHeight(self.sliderView.frame))];
     [self.sliderView addSubview:self.sliderVC.view];
     [self addChildViewController:self.sliderVC];
     [self.sliderVC didMoveToParentViewController:self];
-    
-    self.news = [NSMutableArray new];
-    
-    [self getNews];
 }
+
+
 
 #pragma mark - SERVICE
 
@@ -57,22 +74,63 @@ static  NSString *cellIdentifier =  @"NewsCell";
     NSInteger page = 2;
     
     if (self.paging) {
-        page = self.paging.current+1;
+        page = self.paging.current;
     }
     
-    [[ServiceManager sharedManager] getStoriesWithPage:page completition:^(StoriesResponse *response, BOOL success, NSError *error) {
+    NSString *categoryID;
+    if (self.category) {
+        categoryID = self.category.Id;
+    }
+    
+    [SVProgressHUD show];
+    [[ServiceManager sharedManager] getStoriesWithPage:page categoryID:categoryID  completition:^(StoriesResponse *response, BOOL success, NSError *error) {
+        [SVProgressHUD dismiss];
+        
+        self.isBottomReached = NO;
+        
         self.paging = response.paging;
         
-        [self.news addObjectsFromArray:response.stories];
+        if (self.paging.current == 2) {
+            self.news = [NSMutableArray arrayWithArray:response.stories];
+        }else {
+            [self.news addObjectsFromArray:response.stories];
+        }
+        
         [self.tableView reloadData];
         
     }];
 }
 
-- (IBAction)refresh:(UIBarButtonItem *)sender {
+- (void)getNextNews {
+    
+    NSLog(@"current: %d",self.paging.current);
+    
+    self.paging.current += 1;
+    [self getNews];
 }
 
 
+
+
+#pragma mark - ACTION
+
+- (IBAction)refresh{
+    [self.tableView setContentOffset:CGPointZero];
+    self.paging.current = 2;
+    [self getNews];
+    [self.sliderVC reloadData];
+}
+
+- (void)reloadWithCategory:(NSNotification*)notification {
+    
+    NewsCategory *selectedCategory = notification.object;
+    self.title = selectedCategory.name;
+    self.category = selectedCategory;
+    
+    self.paging.current = 2;
+    [self refresh];
+    
+}
 
 
 #pragma mark - TableView
@@ -97,6 +155,18 @@ static  NSString *cellIdentifier =  @"NewsCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (self.isBottomReached) {
+        return;
+    }
+    if (self.news.count - 1 == indexPath.row) {
+        
+        self.isBottomReached = YES;
+        [self getNextNews];
+        
+    }
+}
 
 
 @end
