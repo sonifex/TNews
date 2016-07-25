@@ -10,7 +10,7 @@
 
 #import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 
-@interface NewsDetailViewController ()
+@interface NewsDetailViewController ()<UIWebViewDelegate>
 
 @property (strong, nonatomic)  UILabel *titleLabel;
 @property (strong, nonatomic)  UIImageView *coverImageView;
@@ -61,6 +61,8 @@
     
     self.contentWebView = [[UIWebView alloc] init];
     self.contentWebView.backgroundColor = [UIColor whiteColor];
+    [self.contentWebView sizeToFit];
+    self.contentWebView.delegate = self;
     
     
     [self.view addSubview:self.titleLabel];
@@ -112,13 +114,22 @@
 }
 
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        return NO;
+    }
+    return YES;
+}
+
+
 #pragma mark - Helper
 
 - (NSString*)changedHtmlString:(NSString*)html {
     return [NSString stringWithFormat:@"<html> \n"
             "<head> \n"
             "<style type=\"text/css\"> \n"
-            "body {font-family: \"%@\"; font-size: %@;}\n"
+            "body {font-family: \"%@\"; font-size: %@;} img{max-width: 100%%; }\n"
             "</style> \n"
             "</head> \n"
             "<body>%@</body> \n"
